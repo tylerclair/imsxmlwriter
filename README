@@ -1,0 +1,17 @@
+This ruby script generates an IMS compatible XML file from a formatted CSV
+file. The output file can be imported into Blackboard Vista with their IMS
+data import tool in the Administration GUI.
+
+Arguments needed:
+1. 	CSV input file, contains a list of course record numbers(CRN) and section
+	names.
+2. 	XML output file, the IMS compatible file that can be imported to the
+	Blackboard Vista learning management system.
+3.	Data source, i.e. SCT BANNER or WebCT
+4. 	Term code, Usually this matches what is received from Banner. 
+5. 	Append text, What you would like to append to the end of each section
+	name. In our case we like to put the abbreviated semester and year
+	i.e. -SP11.
+
+Example command:
+	ruby imsxmlwriter.rb input.csv output.xml "SCT Banner" 20000 -SP11

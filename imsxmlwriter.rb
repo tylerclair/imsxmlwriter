@@ -14,13 +14,14 @@ require 'Fastercsv'
 #arguments
 csv_file = ARGV[0]
 xml_file = ARGV[1]
-term_code = ARGV[2]
-semester_text = ARGV[3]
+data_source = ARGV[2]
+term_code = ARGV[3]
+append_text = ARGV[4]
 
 #check if all arguments are there, prompt if there is an error.
-unless ARGV.length == 4
+unless ARGV.length == 5
   puts "Incorrect number of arguments supplied."
-  puts "Usage: ruby hashtest.rb input_file.csv output_file.xml term_code semester_text"
+  puts "Usage: ruby hashtest.rb input_file.csv \"Data Source\" output_file.xml term_code semester_text"
   exit
 end
 
@@ -30,7 +31,7 @@ x = Builder::XmlMarkup.new(:target=>file, :indent => 2)
 x.instruct!
 x.enterprise {
   x.properties {
-    x.datasource "CEU PROD SCT Banner"
+    x.datasource data_source
     x.datetime t.strftime("%Y-%m-%dT%H:%M:%S")
   }
   #loop through csv file and create a hash of each row and output xml
@@ -38,7 +39,7 @@ x.enterprise {
     sections = row.to_hash
     x.group("recstatus" => "2") {
       x.sourcedid {
-        x.source "CEU PROD SCT Banner"
+        x.source data_source
         #CRN for each row is inserted here
         x.id sections['crn'] + "." + term_code
       }
@@ -48,11 +49,11 @@ x.enterprise {
       }
       x.description {
         #section name for each row is inserted here
-        x.short sections['sectionname'] + semester_text 
+        x.short sections['sectionname'] + append_text 
       }
       x.relationship("relation" => "1") {
         x.sourcedid {
-          x.source "CEU PROD SCT Banner"
+          x.source data_source
           x.id term_code
         }
         x.label "Term"
