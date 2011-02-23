@@ -21,7 +21,7 @@ append_text = ARGV[4]
 #check if all arguments are there, prompt if there is an error.
 unless ARGV.length == 5
   puts "Incorrect number of arguments supplied."
-  puts "Usage: ruby hashtest.rb input_file.csv \"Data Source\" output_file.xml term_code semester_text"
+  puts "Usage: ruby imsxmlwriter.rb input_file.csv output_file.xml \"data_source\" term_code semester_text"
   exit
 end
 
