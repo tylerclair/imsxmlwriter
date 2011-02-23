@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enterprise>
+  <properties>
+    <datasource>SCT Banner</datasource>
+    <datetime>2011-02-22T16:54:01</datetime>
+  </properties>
+  <group recstatus="2">
+    <sourcedid>
+      <source>SCT Banner</source>
+      <id>12345.201020</id>
+    </sourcedid>
+    <grouptype>
+      <scheme>LEARNING_CONTEXT_V1</scheme>
+      <typevalue level="90"/>
+    </grouptype>
+    <description>
+      <short>ACCT-1010-001-FA09</short>
+    </description>
+    <relationship relation="1">
+      <sourcedid>
+        <source>SCT Banner</source>
+        <id>201020</id>
+      </sourcedid>
+      <label>Term</label>
+    </relationship>
+  </group>
+  <group recstatus="2">
+    <sourcedid>
+      <source>SCT Banner</source>
+      <id>12346.201020</id>
+    </sourcedid>
+    <grouptype>
+      <scheme>LEARNING_CONTEXT_V1</scheme>
+      <typevalue level="90"/>
+    </grouptype>
+    <description>
+      <short>ACCT-1015-001-FA09</short>
+    </description>
+    <relationship relation="1">
+      <sourcedid>
+        <source>SCT Banner</source>
+        <id>201020</id>
+      </sourcedid>
+      <label>Term</label>
+    </relationship>
+  </group>
+  <group recstatus="2">
+    <sourcedid>
+      <source>SCT Banner</source>
+      <id>12347.201020</id>
+    </sourcedid>
+    <grouptype>
+      <scheme>LEARNING_CONTEXT_V1</scheme>
+      <typevalue level="90"/>
+    </grouptype>
+    <description>
+      <short>ACCT-2020-001-FA09</short>
+    </description>
+    <relationship relation="1">
+      <sourcedid>
+        <source>SCT Banner</source>
+        <id>201020</id>
+      </sourcedid>
+      <label>Term</label>
+    </relationship>
+  </group>
+  <group recstatus="2">
+    <sourcedid>
+      <source>SCT Banner</source>
+      <id>12348.201020</id>
+    </sourcedid>
+    <grouptype>
+      <scheme>LEARNING_CONTEXT_V1</scheme>
+      <typevalue level="90"/>
+    </grouptype>
+    <description>
+      <short>ACCT-2988-001-FA09</short>
+    </description>
+    <relationship relation="1">
+      <sourcedid>
+        <source>SCT Banner</source>
+        <id>201020</id>
+      </sourcedid>
+      <label>Term</label>
+    </relationship>
+  </group>
+</enterprise>
